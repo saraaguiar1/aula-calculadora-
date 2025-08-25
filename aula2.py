@@ -32,4 +32,14 @@ tk.Button(janela, text="-", command=lambda: entrada_var.set(entrada_var.get()+"-
 tk.Button(janela, text="0", command=lambda: entrada_var.set(entrada_var.get()+"0")).pack(side="left")
 tk.Button(janela, text=".", command=lambda: entrada_var.set(entrada_var.get()+"." )).pack(side="left")
 
+# Botão "=" calcula a expressão que está no display
+tk.Button(janela, text="=", command=lambda: entrada_var.set(str(eval(entrada_var.get())))).pack(side="left")
+
+# Botão "+" adiciona o operador de soma
+tk.Button(janela, text="+", command=lambda: entrada_var.set(entrada_var.get()+"+")).pack(side="left")
+
+# Botão "C" limpa o display
+tk.Button(janela, text="C", command=lambda: entrada_var.set("")).pack(side="left")
+
+# Inicia o loop principal da interface, mantendo a janela aberta
 janela.mainloop()
